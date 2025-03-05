@@ -21,6 +21,9 @@ public class Task {
     }
 
     public void assignTo(String teamMember) {
+        if (teamMember == null || teamMember.isBlank()) {
+            throw new IllegalArgumentException("Team member cannot be null or blank");
+        }
         this.assignedTo = teamMember;
     }
 
